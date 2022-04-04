@@ -1,7 +1,8 @@
+//All needed variables to make the server running correctly
+
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
-
 
 const app = express();
 
@@ -29,9 +30,6 @@ const sess = {
 };
 
 app.use(session(sess));
-
-// const helpers = require("./utils/helpers");
-// const hbs = exphbs.create({ helpers });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
