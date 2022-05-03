@@ -4,36 +4,26 @@ const path = require('path');
 
 //All Necessary pages with authorization as needed
 
-router.get("/", withAuth, (req, res) => {
-  res.render("homepage", {
-    loggedIn: req.session.loggedIn,
-  });
+router.get('/', (req, res) => {
+      res.render('homepage', {
+           loggedIn: req.session.loggedIn
+   });
 });
 
 router.get('/login', (req,res) => {
     res.render('login');
-});
- 
- router.get("/signup", (req, res) => {
-   res.render("signup");
  });
 
 router.get('/office', withAuth, (req,res) => {
-        res.render('office', {
-           loggedIn: req.session.loggedIn, 
-   });
+        res.render('office');
 });
 
 router.get('/warehouse', withAuth, (req,res) => {
-        res.render("warehouse", {
-          loggedIn: req.session.loggedIn,
-        });
+        res.render('warehouse');
 });
 
 router.get("/completed", withAuth, (req, res) => {
-  res.render("completed", {
-    loggedIn: req.session.loggedIn,
-  });
+  res.render("completed");
 });
 
 router.get('/request', (req,res) => {
