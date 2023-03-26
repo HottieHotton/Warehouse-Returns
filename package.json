@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "homepage": "https://hottiehotton.github.io/Warehouse-Returns/",
   "scripts": {
     "start": "node server.js",
     "test": "jest",
-    "seeds": "node seeds/index.js"
+    "seeds": "node seeds/index.js",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "author": "",
   "license": "MIT",
@@ -25,6 +28,7 @@
     "sequelize": "^6.15.0"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "jest": "^27.4.7"
   }
 }
